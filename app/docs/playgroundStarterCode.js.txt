@@ -1,0 +1,27 @@
+import React, { Component } from 'react'
+
+import { Row, Column, Button } from '@ui/pattern-library/atoms'
+import { Slider, TagPoint, CheckGroup } from '@ui/pattern-library/molecules'
+
+
+export default class Playground extends Component {
+  state = { sliderValue: 5 }
+
+  handleChange(name) {
+    return value => this.setState({ [name]: value })
+  }
+
+  resetValue = () =>
+    this.setState({ sliderValue: 5 })
+
+  render() {
+    return (
+      <Column marginBetween={20}>
+        <Row padding={10} marginBetween={10}>
+          <Slider value={this.state.sliderValue} onChange={this.handleChange('sliderValue')} max={15} />
+          <Button onClick={this.resetValue}>Reset ({this.state.sliderValue})</Button>
+        </Row>
+      </Column>
+    )
+  }
+}
