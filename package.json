@@ -1,12 +1,21 @@
 {
-  "name": "@ui/pattern-library-docs",
-  "private": true,
-  "version": "0.1.1",
-  "description": "Documentation for pattern-library",
+  "name": "react-books",
+  "version": "0.1.0",
+  "description": "Documentation for React components",
   "scripts": {
     "start": "node ./server",
     "build": "cross-env NODE_ENV=production webpack -p --config ./webpack.docs.prod.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lestad/react-books.git"
+  },
+  "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lestad/react-books/issues"
+  },
+  "homepage": "https://github.com/lestad/react-books#readme",
   "dependencies": {
     "babel-standalone": "^6.21.1",
     "codemirror": "^5.23.0",
